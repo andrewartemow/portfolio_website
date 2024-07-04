@@ -9,6 +9,7 @@
 }
 
 body {
+  position: relative;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -25,6 +26,63 @@ p {
 a,
 .btn {
   transition: all 0.3s ease;
+}
+
+/* MODAL */
+
+#modal {
+  padding: 40px;
+  max-width: 50rem;
+  width: 100%;
+  position: fixed;
+  z-index: 200;
+  background-color: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+}
+
+#modal h2 {
+  margin-bottom: 20px;
+}
+
+#modal p {
+  margin-bottom: 20px;
+}
+
+#modal-overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0.5;
+  z-index: 10;
+}
+
+.modal--hidden {
+  display: none;
+}
+
+.modal--visible {
+  display: flex;
+  align-items: center;
+}
+
+#modal .modal-description {
+  width: 60%;
+}
+
+#modal .image-wrapper {
+  width: 40%;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+#modal .image-wrapper img {
+  width: 100%;
 }
 
 /* DESKTOP NAV */

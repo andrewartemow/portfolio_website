@@ -1,16 +1,441 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="./mediaqueries.css" />
-    <title>Artemov Andrei</title>
-  </head>
-  <body>
-    <nav id="desktop-nav">
-      <div class="logo">Artemov Andrei</div>
-      <div>
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z5VVW05538"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-Z5VVW05538');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./mediaqueries.css" />
+  <title>Artemov Andrei</title>
+</head>
+
+<body>
+  <div id="modal" class="modal modal--hidden">
+    <div class="modal-description">
+      <h2>Hey, Before You Go!</h2>
+      <p>Thanks for stopping by my website! If you’re looking for someone who’s passionate about software development
+        and
+        ready to tackle any challenge, I’m your person. I love bringing ideas to life and making sure every project not
+        only meets but exceeds expectations. I’m all about finding creative solutions and making sure you’re thrilled
+        with
+        the results. Let’s chat and see how we can work together to make something amazing. <br />
+        email: andrewartemow@gmail.com
+      </p>
+      <button id="closeButton" class="btn btn-color-2">Close</button>
+    </div>
+    <div class="image-wrapper">
+      <img src="./assets/photo1717877644_copy.jpeg" alt="">
+    </div>
+  </div>
+  <div id="modal-overlay" class="modal modal--hidden">
+  </div>
+  <nav id="desktop-nav">
+    <div class="logo">Artemov Andrei</div>
+    <div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <nav id="hamburger-nav">
+    <div class="logo">Artemov Andrei</div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="menu-links">
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <section id="profile">
+    <div class="section__pic-container">
+      <img src="./assets/avatar.jpg" alt="Artemov Andrei profile picture" class="profile-img" />
+    </div>
+    <div class="section__text">
+      <p class="section__text__p1">Hello, I'm</p>
+      <h1 class="title">Artemov Andrei</h1>
+      <p class="section__text__p2">Software Developer</p>
+      <div class="btn-container">
+        <button class="btn btn-color-2" onclick="window.open('./assets/Resume_Andrei_Artemov.pdf')">
+          Download CV
+        </button>
+        <button class="btn btn-color-1" onclick="location.href='./#contact'">
+          Contact Info
+        </button>
+      </div>
+      <div id="socials-container">
+        <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon"
+          onclick="location.href='https://www.linkedin.com/in/andreiartemow/'" />
+        <img src="./assets/github.png" alt="My GitHub profile" class="icon"
+          onclick="location.href='https://github.com/andrewartemow'" />
+      </div>
+    </div>
+  </section>
+  <section id="about">
+    <p class="section__text__p1">Get To Know More</p>
+    <h1 class="title">About Me</h1>
+    <div class="experience-details-container">
+      <!-- <div class="section__pic-container">
+          <img
+            src="./assets/profileimg2.jpg"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div> -->
+      <div class="about-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <img src="./assets/experience.png" alt="experience icon" class="icon" />
+            <h3>Experience</h3>
+            <p>2 year <br />Software Development</p>
+          </div>
+          <div class="details-container">
+            <img src="./assets/education.png" alt="Education icon" class="icon" />
+            <h3>Education</h3>
+            <p>B.Sc. Bachelors Degree</p>
+          </div>
+        </div>
+        <div class="text-container">
+          <p>
+            I studied at the College of Communications at the Faculty of
+            Computer Science in Odessa, now I moved from Ukraine to Romania
+            and study at Technical University of Cluj-Napoca. Why did I choose
+            software development? I like to work in the field of technology
+            and I love to learn something new in this area.
+          </p>
+        </div>
+      </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#skills'" />
+  </section>
+  <section id="skills">
+    <p class="section__text__p1">Explore My</p>
+    <h1 class="title">Skills</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container">
+          <h2 class="experience-subtitle">Frontend Development</h2>
+          <div class="article-container">
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>HTML</h3>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>CSS</h3>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>SASS</h3>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>JavaScript</h3>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>TypeScript</h3>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>ReactJS</h3>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>NextJs</h3>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>TailwindCss</h3>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Wordpress</h3>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="details-container">
+          <h2 class="experience-subtitle">Backend Development</h2>
+          <div class="article-container">
+            <article>
+              <img src="./assets/checkmark.png" alt="Skills icon" class="icon" />
+              <div>
+                <h3>PHP</h3>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>MySQL</h3>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>NodeJS</h3>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Git</h3>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'" />
+  </section>
+  <section id="experience">
+    <p class="section__text__p1">Explore My</p>
+    <h1 class="title">Experience</h1>
+    <div class="details-container">
+      <div class="company-name-logo">
+        <img class="company-logo" src="./assets/clinic_software_uk_logo.jpg" alt="Company logo" />
+        <h2 class="experience-subtitle">ClinicSoftware</h2>
+        <p>Current Work</p>
+        <p>Location: UK / London (Remote)</p>
+      </div>
+      <div class="text-container">
+        <p>
+          I help business with their websites. I create and improve web pages
+          using HTML, CSS, and JavaScript, also edit email templates. I also
+          work with WordPress, setting up plugins and themes to make websites
+          better.
+        </p>
+      </div>
+    </div>
+    <div class="details-container">
+      <div class="company-name-logo">
+        <img class="company-logo" src="./assets/eateryclub_logo.png" alt="Company logo" />
+        <h2 class="experience-subtitle">Eatery Club</h2>
+        <p>November 2021 - May 2022</p>
+        <p>Location: Odessa (Ukraine)</p>
+      </div>
+      <div class="text-container">
+        <p>
+          In November 2021, I got a job at the Eatery Club company in Ukraine
+          (Odessa) as an intern. At work I was developing the interface of
+          their product using html / css / javascript / react.js. This was my
+          first commercial development experience. Improved my programming
+          skills and learned how to use Jira and resolve conflicts when
+          merging git branches. I had my own mentor who taught me everything
+          related to work.
+        </p>
+      </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
+  </section>
+  <section id="projects">
+    <p class="section__text__p1">Browse My Recent</p>
+    <h1 class="title">Projects</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container color-container project-container" style="max-width: 400px;">
+          <div class="article-container">
+            <div class="project-img-container">
+              <img src="./assets/coinhunt.jpg" alt="Project 1" class="project-img" />
+            </div>
+
+            <h2 class="experience-subtitle project-title">Coinhunt</h2>
+            <p>
+              HTML / CSS / JavaScript / React.JS / Mobile Responsive / API
+            </p>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/andrewartemow/coinhunt'">
+                GitHub
+              </button>
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://coinhunt-five.vercel.app/'">
+                Live Demo
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="details-container color-container project-container" style="max-width: 400px;">
+          <div class="article-container">
+            <div class="project-img-container">
+              <img src="./assets/e-commerce_website.png" alt="Project 2" class="project-img" />
+            </div>
+
+            <h2 class="experience-subtitle project-title">
+              E-Commerce Website
+            </h2>
+            <p>HTML / CSS / JavaScript / Paypal Payment</p>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/andrewartemow/e-commerce-store'">
+                GitHub
+              </button>
+              <button class="btn btn-color-2 project-btn"
+                onclick="location.href='https://e-commerce-store-ten-orcin.vercel.app/'">
+                Live Demo
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="details-container color-container project-container" style="max-width: 400px;">
+          <div class="article-container">
+            <div class="project-img-container">
+              <img src="./assets/afkrush.jpg" alt="Project 3" class="project-img" />
+            </div>
+
+            <h2 class="experience-subtitle project-title">AFKRush</h2>
+            <p>
+              HTML / CSS / JavaScript / React.JS / Next.JS / Mobile Responsive
+              / API
+            </p>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/andrewartemow/afkrush'">
+                GitHub
+              </button>
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://afkrush.vercel.app/'">
+                Live Demo
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="details-container color-container project-container" style="max-width: 400px;">
+          <div class="article-container">
+            <div class="project-img-container">
+              <img src="./assets/chatapp.jpg" alt="Project 4" class="project-img" />
+            </div>
+
+            <h2 class="experience-subtitle project-title">ChatApp</h2>
+            <p>
+              HTML / CSS / JavaScript / React.JS / Mobile Responsive /
+              Firebase
+            </p>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/andrewartemow/chatapp'">
+                GitHub
+              </button>
+              <button class="btn btn-color-2 project-btn"
+                onclick="location.href='https://chatapp-blue-eight.vercel.app/'">
+                Live Demo
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="details-container color-container project-container" style="max-width: 400px;">
+          <div class="article-container">
+            <div class="project-img-container">
+              <img src="./assets/carzone.jpg" alt="Project 5" class="project-img" />
+            </div>
+
+            <h2 class="experience-subtitle project-title">Carzone</h2>
+            <p>HTML / CSS / JavaScript / Mobile Responsive / PHP</p>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/andrewartemow/carzone'">
+                GitHub
+              </button>
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://carzone-rho.vercel.app/'">
+                Live Demo
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="details-container color-container project-container" style="max-width: 400px;">
+          <div class="article-container">
+            <div class="project-img-container">
+              <img src="./assets/intouch.png" alt="Project 5" class="project-img" />
+            </div>
+
+            <h2 class="experience-subtitle project-title">Intouch.ai</h2>
+            <p>ReactJs / TailwindCSS / TypeScript / daisyUI / NodeJS / Express</p>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/andrewartemow/intouch'">
+                GitHub
+              </button>
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://intouch-eight.vercel.app/'">
+                Live Demo
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="details-container color-container project-container" style="max-width: 400px;">
+          <div class="article-container">
+            <div class="project-img-container">
+              <img src="./assets/moodwatch.png" alt="Project 5" class="project-img" />
+            </div>
+
+            <h2 class="experience-subtitle project-title">MoodWatch</h2>
+            <p>ReactJs / TailwindCSS / TypeScript / daisyUI</p>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/andrewartemow/moodwatch'">
+                GitHub
+              </button>
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://moodwatch.vercel.app/'">
+                Live Demo
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
+  </section>
+  <section id="contact">
+    <p class="section__text__p1">Get In Touch</p>
+    <h1 class="title">Contact Me</h1>
+    <div class="contact-info-upper-container">
+      <div class="contact-info-container">
+        <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
+        <p href="mailto:andrewartemow@gmail.com">andrewartemow@gmail.com</p>
+      </div>
+      <div class="contact-info-container">
+        <img src="./assets/linkedin.png" alt="Linkedin icon" class="icon contact-icon" />
+        <p href="https://www.linkedin.com/in/andreiartemow/">andreiartemow</p>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <nav>
+      <div class="nav-links-container">
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
@@ -20,499 +445,9 @@
         </ul>
       </div>
     </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">Artemov Andrei</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <ul class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-    <section id="profile">
-      <div class="section__pic-container">
-        <img
-          src="./assets/profileimg.jpg"
-          alt="Artemov Andrei profile picture"
-          class="profile-img"
-        />
-      </div>
-      <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Artemov Andrei</h1>
-        <p class="section__text__p2">Software Developer</p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/Resume_Andrei_Artemov.pdf')"
-          >
-            Download CV
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Contact Info
-          </button>
-        </div>
-        <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://www.linkedin.com/in/andreiartemow/'"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My GitHub profile"
-            class="icon"
-            onclick="location.href='https://github.com/andrewartemow'"
-          />
-        </div>
-      </div>
-    </section>
-    <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="experience-details-container">
-        <!-- <div class="section__pic-container">
-          <img
-            src="./assets/profileimg2.jpg"
-            alt="Profile picture"
-            class="about-pic"
-          />
-        </div> -->
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p>1 year <br />Software Development</p>
-            </div>
-            <div class="details-container">
-              <img
-                src="./assets/education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-              <p>B.Sc. Bachelors Degree</p>
-            </div>
-          </div>
-          <div class="text-container">
-            <p>
-              I studied at the College of Communications at the Faculty of
-              Computer Science in Odessa, now I moved from Ukraine to Romania
-              and study at Technical University of Cluj-Napoca. Why did I choose
-              software development? I like to work in the field of technology
-              and I love to learn something new in this area.
-            </p>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#skills'"
-      />
-    </section>
-    <section id="skills">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Skills</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-subtitle">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CSS</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>SASS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>TypeScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>ReactJS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-subtitle">Backend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Skills icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>PHP</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>MySQL</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>NodeJS</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Git</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
-    </section>
-    <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
-      <div class="details-container">
-        <div class="company-name-logo">
-          <img
-            class="company-logo"
-            src="./assets/clinic_software_uk_logo.jpg"
-            alt="Company logo"
-          />
-          <h2 class="experience-subtitle">ClinicSoftware</h2>
-          <p>Current Work</p>
-          <p>Location: UK / London (Remote)</p>
-        </div>
-        <div class="text-container">
-          <p>
-            I help business with their websites. I create and improve web pages
-            using HTML, CSS, and JavaScript, also edit email templates. I also
-            work with WordPress, setting up plugins and themes to make websites
-            better.
-          </p>
-        </div>
-      </div>
-      <div class="details-container">
-        <div class="company-name-logo">
-          <img
-            class="company-logo"
-            src="./assets/eateryclub_logo.png"
-            alt="Company logo"
-          />
-          <h2 class="experience-subtitle">Eatery Club</h2>
-          <p>November 2021 - May 2022</p>
-          <p>Location: Odessa (Ukraine)</p>
-        </div>
-        <div class="text-container">
-          <p>
-            In November 2021, I got a job at the Eatery Club company in Ukraine
-            (Odessa) as an intern. At work I was developing the interface of
-            their product using html / css / javascript / react.js. This was my
-            first commercial development experience. Improved my programming
-            skills and learned how to use Jira and resolve conflicts when
-            merging git branches. I had my own mentor who taught me everything
-            related to work.
-          </p>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
-    </section>
-    <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container project-container">
-            <div class="article-container">
-              <div class="project-img-container">
-                <img
-                  src="./assets/coinhunt.jpg"
-                  alt="Project 1"
-                  class="project-img"
-                />
-              </div>
+    <p>Copyright &#169; 2023 Artemov Andrei. All Rights Reserved.</p>
+  </footer>
+  <script src="./script.js"></script>
+</body>
 
-              <h2 class="experience-subtitle project-title">Coinhunt</h2>
-              <p>
-                HTML / CSS / JavaScript / React.JS / Mobile Responsive / API
-              </p>
-              <div class="btn-container">
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/andrewartemow/coinhunt'"
-                >
-                  GitHub
-                </button>
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://coinhunt-five.vercel.app/'"
-                >
-                  Live Demo
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="details-container color-container project-container">
-            <div class="article-container">
-              <div class="project-img-container">
-                <img
-                  src="./assets/e-commerce_website.png"
-                  alt="Project 2"
-                  class="project-img"
-                />
-              </div>
-
-              <h2 class="experience-subtitle project-title">
-                E-Commerce Website
-              </h2>
-              <p>HTML / CSS / JavaScript / Paypal Payment</p>
-              <div class="btn-container">
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/andrewartemow/e-commerce-store'"
-                >
-                  GitHub
-                </button>
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://e-commerce-store-ten-orcin.vercel.app/'"
-                >
-                  Live Demo
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="details-container color-container project-container">
-            <div class="article-container">
-              <div class="project-img-container">
-                <img
-                  src="./assets/afkrush.jpg"
-                  alt="Project 3"
-                  class="project-img"
-                />
-              </div>
-
-              <h2 class="experience-subtitle project-title">AFKRush</h2>
-              <p>
-                HTML / CSS / JavaScript / React.JS / Next.JS / Mobile Responsive
-                / API
-              </p>
-              <div class="btn-container">
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/andrewartemow/afkrush'"
-                >
-                  GitHub
-                </button>
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://afkrush.vercel.app/'"
-                >
-                  Live Demo
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="details-container color-container project-container">
-            <div class="article-container">
-              <div class="project-img-container">
-                <img
-                  src="./assets/chatapp.jpg"
-                  alt="Project 4"
-                  class="project-img"
-                />
-              </div>
-
-              <h2 class="experience-subtitle project-title">ChatApp</h2>
-              <p>
-                HTML / CSS / JavaScript / React.JS / Mobile Responsive /
-                Firebase
-              </p>
-              <div class="btn-container">
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/andrewartemow/chatapp'"
-                >
-                  GitHub
-                </button>
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://chatapp-blue-eight.vercel.app/'"
-                >
-                  Live Demo
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="details-container color-container project-container">
-            <div class="article-container">
-              <div class="project-img-container">
-                <img
-                  src="./assets/carzone.jpg"
-                  alt="Project 5"
-                  class="project-img"
-                />
-              </div>
-
-              <h2 class="experience-subtitle project-title">Carzone</h2>
-              <p>HTML / CSS / JavaScript / Mobile Responsive / PHP</p>
-              <div class="btn-container">
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/andrewartemow/carzone'"
-                >
-                  GitHub
-                </button>
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://carzone-rho.vercel.app/'"
-                >
-                  Live Demo
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
-    </section>
-    <section id="contact">
-      <p class="section__text__p1">Get In Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p href="mailto:andrewartemow@gmail.com">andrewartemow@gmail.com</p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="Linkedin icon"
-            class="icon contact-icon"
-          />
-          <p href="https://www.linkedin.com/in/andreiartemow/">andreiartemow</p>
-        </div>
-      </div>
-    </section>
-    <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
-      <p>Copyright &#169; 2023 Artemov Andrei. All Rights Reserved.</p>
-    </footer>
-    <script src="./script.js"></script>
-  </body>
 </html>
