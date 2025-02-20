@@ -16,10 +16,22 @@
   <link rel="stylesheet" href="./style.css" />
   <link rel="stylesheet" href="./mediaqueries.css" />
   <title>Artemov Andrei</title>
+
+  <script>
+    const toggleMenu = () => {
+      const menu = document.querySelector('.menu-links');
+      const icon = document.querySelector('.hamburger-icon');
+
+      menu.classList.toggle('open');
+      icon.classList.toggle('open');
+
+      console.log('click');
+    };
+  </script>
 </head>
 
 <body>
-  <div id="modal" class="modal modal--hidden">
+  <!-- <div id="modal" class="modal modal--hidden">
     <div class="modal-description">
       <h2>Hey, Before You Go!</h2>
       <p>Thanks for stopping by my website! If you’re looking for someone who’s passionate about software development
@@ -35,9 +47,9 @@
     <div class="image-wrapper">
       <img src="./assets/photo1717877644_copy.jpeg" alt="">
     </div>
-  </div>
-  <div id="modal-overlay" class="modal modal--hidden">
-  </div>
+  </div> -->
+  <!-- <div id="modal-overlay" class="modal modal--hidden">
+  </div> -->
   <nav id="desktop-nav">
     <div class="logo">Artemov Andrei</div>
     <div>
@@ -52,13 +64,13 @@
   </nav>
   <nav id="hamburger-nav">
     <div class="logo">Artemov Andrei</div>
-    <div class="hamburger-menu">
-      <div class="hamburger-icon" onclick="toggleMenu()">
+    <div class="hamburger-menu" onclick="toggleMenu()">
+      <div class="hamburger-icon">
         <span></span>
         <span></span>
         <span></span>
       </div>
-      <ul class="menu-links">
+      <ul class="menu-links open">
         <li><a href="#about" onclick="toggleMenu()">About</a></li>
         <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
         <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
@@ -117,11 +129,9 @@
         </div>
         <div class="text-container">
           <p>
-            I studied at the College of Communications at the Faculty of
-            Computer Science in Odessa, now I moved from Ukraine to Romania
-            and study at Technical University of Cluj-Napoca. Why did I choose
-            software development? I like to work in the field of technology
-            and I love to learn something new in this area.
+            I am a solution-oriented Software Developer, lifelong learner, and multilingual professional with a passion
+            for building dynamic, user-friendly web applications. I enjoy solving complex challenges and am motivated by
+            the impact that technology can have on both individual users and the global community.
           </p>
         </div>
       </div>
@@ -232,15 +242,16 @@
       <div class="company-name-logo">
         <img class="company-logo" src="./assets/clinic_software_uk_logo.jpg" alt="Company logo" />
         <h2 class="experience-subtitle">ClinicSoftware</h2>
-        <p>Current Work</p>
+        <p>November 2023 - Current Work</p>
         <p>Location: UK / London (Remote)</p>
       </div>
       <div class="text-container">
         <p>
-          I help business with their websites. I create and improve web pages
-          using HTML, CSS, and JavaScript, also edit email templates. I also
-          work with WordPress, setting up plugins and themes to make websites
-          better.
+          I help businesses build and improve their websites by creating and refining web pages with HTML, CSS, and
+          JavaScript. I also edit email templates to make them more effective and visually appealing. On top of that, I
+          work with WordPress—setting up themes, configuring plugins, and optimizing sites for a better user experience.
+          I also create automation scripts to streamline processes and save time. My goal is to make websites look
+          great, work smoothly, and help businesses succeed online.
         </p>
       </div>
     </div>
@@ -253,13 +264,11 @@
       </div>
       <div class="text-container">
         <p>
-          In November 2021, I got a job at the Eatery Club company in Ukraine
-          (Odessa) as an intern. At work I was developing the interface of
-          their product using html / css / javascript / react.js. This was my
-          first commercial development experience. Improved my programming
-          skills and learned how to use Jira and resolve conflicts when
-          merging git branches. I had my own mentor who taught me everything
-          related to work.
+          In November 2021, I started as an intern at Eatery Club in Odesa, Ukraine. My role focused on developing the
+          user interface of their product using HTML, CSS, JavaScript, and React.js. This was my first commercial
+          development experience, where I improved my programming skills and learned to work with Jira, as well as
+          handle Git merge conflicts. I had the opportunity to work under a mentor who guided me through real-world
+          development practices and industry workflows.
         </p>
       </div>
     </div>
@@ -379,7 +388,7 @@
     </nav>
     <p>Copyright &#169; 2023 Artemov Andrei. All Rights Reserved.</p>
   </footer>
-  <script src="./script.js"></script>
+  <!-- <script src="./script.js"></script> -->
 </body>
 
 </html>
